@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Protocol_OrientedDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure write a valid code  😂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCJ-Km-P5H">
+                                <rect key="frame" x="20" y="144" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RC3-Qf-kXa">
+                                <rect key="frame" x="20" y="214.5" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHq-vH-FKH">
+                                <rect key="frame" x="20" y="423" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.41103674740000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xcG-LN-SHH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0uo-lR-c7A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RC3-Qf-kXa" secondAttribute="trailing" constant="20" id="Cgy-8V-7pF"/>
+                            <constraint firstItem="RC3-Qf-kXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Exu-R4-1h4"/>
+                            <constraint firstItem="RC3-Qf-kXa" firstAttribute="top" secondItem="JCJ-Km-P5H" secondAttribute="bottom" constant="50" id="Ntj-73-c2k"/>
+                            <constraint firstItem="fHq-vH-FKH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VIy-mv-wBb"/>
+                            <constraint firstItem="JCJ-Km-P5H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="XjB-Kc-udN"/>
+                            <constraint firstItem="fHq-vH-FKH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c1w-aA-VZ1"/>
+                            <constraint firstItem="JCJ-Km-P5H" firstAttribute="width" secondItem="RC3-Qf-kXa" secondAttribute="width" id="cOx-fD-8U3"/>
+                            <constraint firstItem="fHq-vH-FKH" firstAttribute="trailing" secondItem="RC3-Qf-kXa" secondAttribute="trailing" id="dds-Lb-GGt"/>
+                            <constraint firstItem="fHq-vH-FKH" firstAttribute="leading" secondItem="RC3-Qf-kXa" secondAttribute="leading" id="mZc-lC-bhF"/>
+                            <constraint firstItem="JCJ-Km-P5H" firstAttribute="centerX" secondItem="RC3-Qf-kXa" secondAttribute="centerX" id="ype-8p-5Bm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorMessage" destination="JCJ-Km-P5H" id="lgX-pi-dY2"/>
+                        <outlet property="loginButton" destination="fHq-vH-FKH" id="1Zz-ZE-nJt"/>
+                        <outlet property="password" destination="RC3-Qf-kXa" id="lSa-PP-hck"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
