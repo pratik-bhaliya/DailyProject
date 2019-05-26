@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
+typealias completionHandler = (Result<[Courses],Error>) -> ()
 class Network {
     
     static let sharedInstance = Network()
     
-    func fetchCourseJSON(completion: @escaping (Result<[Courses],Error>) -> ()) {
+    func fetchCourseJSON(completion: @escaping completionHandler) {
         let urlString = "https://api.letsbuildthatapp.com/jsondecodable/courses"
         guard let url = URL(string: urlString) else  {return}
         
